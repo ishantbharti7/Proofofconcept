@@ -1,0 +1,7 @@
+pandas
+langchain
+langchain_core
+langchain-community
+langchain_google_genai
+numpy
+faiss-cpu
