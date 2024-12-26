@@ -1,0 +1,252 @@
+
+
+
+1. What is Python?
+   Python is a highlevel, interpreted, and dynamicallytyped programming language known for its simplicity and readability.
+
+2. What are Python's key features?
+    Easytoread syntax
+    Dynamically typed
+    Interpreted
+    Extensive libraries
+    Supports objectoriented and functional programming
+
+3. How is Python an interpreted language?
+   Python code is executed line by line by the Python interpreter, without the need for prior compilation into machine code.
+
+4. Explain Python's GIL (Global Interpreter Lock).
+   GIL ensures that only one thread executes Python bytecode at a time, even in multithreaded programs, to manage memory safely.
+
+5. What are Python’s data types?
+    int
+    float
+    str
+    list
+    tuple
+    set
+    dict
+    bool
+
+
+
+### Intermediate Python Questions
+
+6. Differentiate between a list and a tuple.
+    List: Mutable, uses `[]`, slower.
+    Tuple: Immutable, uses `()`, faster.
+
+7. What is a lambda function?
+   A lambda function is an anonymous function defined using the `lambda` keyword. Example: `lambda x: x + 10`
+
+8. What are Python decorators?
+   Decorators are functions that modify the behavior of another function or method. They are defined with `@decorator`.
+
+9. What is the difference between `is` and `==`?
+    `is`: Checks object identity.
+    `==`: Checks value equality.
+
+10. What are Python’s builtin data structures?
+     List
+     Tuple
+     Set
+     Dictionary
+
+
+
+### Advanced Python Questions
+
+11. How is memory managed in Python?
+    Python uses automatic garbage collection to manage memory, deallocating unused objects via reference counting and a cyclic garbage collector.
+
+12. Explain Python’s method resolution order (MRO).
+    MRO determines the order in which classes are searched for a method. It follows the C3 linearization algorithm.
+
+13. What is a Python metaclass?
+    A metaclass defines the behavior of a class. Classes themselves are instances of metaclasses.
+
+14. What are Python’s comprehensions?
+    Python comprehensions provide concise ways to create lists, sets, and dictionaries. Example: `[x2 for x in range(10)]`
+
+15. What are Python’s magic methods?
+    Special methods with double underscores (e.g., `__init__`, `__str__`, `__len__`) that allow custom behavior for builtin operations.
+
+
+
+### Error and Exception Handling
+
+16. How does Python handle exceptions?
+    Using `try`, `except`, `else`, and `finally` blocks.
+
+17. What is the difference between `Exception` and `BaseException`?
+     `BaseException`: Root of all exceptions.
+     `Exception`: Derived class for userdefined exceptions.
+
+18. How to create a custom exception in Python?
+    ```python
+    class MyException(Exception):
+        pass
+    ```
+
+19. What is the `with` statement used for?
+    Ensures proper resource management, like closing a file after use.
+
+20. What is the purpose of `raise`?
+    It is used to explicitly raise an exception in Python.
+
+
+
+### Python Libraries
+
+21. Name some popular Python libraries.
+     NumPy
+     Pandas
+     Matplotlib
+     Scikitlearn
+     TensorFlow
+
+22. What is Pandas used for?
+    Pandas is used for data manipulation and analysis.
+
+23. Explain the difference between `loc` and `iloc` in Pandas.
+     `loc`: Labelbased indexing.
+     `iloc`: Integerbased indexing.
+
+24. What is NumPy used for?
+    It is used for numerical computations, providing support for arrays, matrices, and mathematical functions.
+
+25. What is Matplotlib used for?
+    It is used to create static, interactive, and animated visualizations in Python.
+
+
+
+### File Operations
+
+26. How do you open a file in Python?
+    Using the `open()` function. Example:
+    ```python
+    with open('file.txt', 'r') as file:
+        data = file.read()
+    ```
+
+27. What are file modes in Python?
+     `r`: Read
+     `w`: Write
+     `a`: Append
+     `r+`: Read and Write
+
+28. How to handle CSV files in Python?
+    Using the `csv` module or Pandas.
+
+29. How to read a JSON file in Python?
+    Using the `json` module:
+    ```python
+    import json
+    with open('file.json') as file:
+        data = json.load(file)
+    ```
+
+30. How to check if a file exists?
+    Using the `os` module:
+    ```python
+    import os
+    os.path.exists('file.txt')
+    ```
+
+
+
+### OOP in Python
+
+31. What is inheritance in Python?
+    A mechanism to derive a new class from an existing class.
+
+32. What is polymorphism in Python?
+    It allows objects to be treated as instances of their parent class.
+
+33. Explain the concept of encapsulation.
+    Encapsulation restricts direct access to some of an object's components.
+
+34. What is the purpose of the `super()` function?
+    It allows access to methods of the parent class.
+
+35. What is the difference between a class and an object?
+     Class: Blueprint for creating objects.
+     Object: Instance of a class.
+
+
+
+### Python for Data Structures
+
+36. How to create a stack in Python?
+    Using lists or the `collections.deque` module.
+
+37. How to create a queue in Python?
+    Using `collections.deque` or `queue.Queue`.
+
+38. What is the difference between a shallow copy and a deep copy?
+     Shallow Copy: Copies references to objects.
+     Deep Copy: Copies the objects themselves.
+
+39. How to merge two dictionaries in Python?
+    ```python
+    dict1.update(dict2)
+    ```
+
+40. What is a generator in Python?
+    A function that yields values one at a time using `yield`.
+
+
+
+### Multithreading and Multiprocessing
+
+41. What is the difference between threading and multiprocessing?
+     Threading: For I/Obound tasks.
+     Multiprocessing: For CPUbound tasks.
+
+42. How to create a thread in Python?
+    Using the `threading` module:
+    ```python
+    import threading
+    def task():
+        print("Thread running")
+    thread = threading.Thread(target=task)
+    thread.start()
+    ```
+
+43. What is the purpose of the `multiprocessing` module?
+    To parallelize CPUintensive tasks across multiple processes.
+
+44. What are Python’s synchronization primitives?
+     Locks
+     Semaphores
+     Events
+     Condition variables
+
+45. What is `asyncio`?
+    A library for asynchronous programming in Python.
+
+
+
+### Miscellaneous
+
+46. What is the use of `__name__ == "__main__"`?
+    To check if a Python script is being run directly or imported.
+
+47. How to handle Python version differences?
+    Using `six` or `future` modules for compatibility.
+
+48. What is the difference between mutable and immutable types?
+     Mutable: Objects that can be changed (e.g., lists, dicts).
+     Immutable: Objects that cannot be changed (e.g., tuples, strings).
+
+49. What is Python's `__init__.py`?
+    It makes a directory a Python package.
+
+50. How to optimize Python code?
+     Use list comprehensions
+     Leverage builtin functions
+     Avoid global variables
+     Profile with `cProfile`
+
+ 
+
+Would you like deeper explanations on any of these topics?
